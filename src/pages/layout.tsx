@@ -9,7 +9,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <meta name="description" content="My Website" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <body>{children}</body>
+      <main>{children}</main>
     </div>
   );
 }
