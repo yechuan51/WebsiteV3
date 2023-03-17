@@ -1,6 +1,12 @@
+import NavBarComp, { NavBarItemType } from "@/components/navBar/navBar";
 import Head from "next/head";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
+  const navBarItems: NavBarItemType[] = [
+    { key: "blog", displayText: "Blog", href: "/blogs" },
+    { key: "about", displayText: "About", href: "/about" },
+  ];
+
   return (
     <div>
       <Head>
@@ -9,6 +15,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <meta name="description" content="My Website" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <header>
+        <NavBarComp items={navBarItems} />
+      </header>
       <main>{children}</main>
     </div>
   );
