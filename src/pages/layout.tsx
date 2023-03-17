@@ -1,3 +1,4 @@
+import CurrentTimeComp from "@/components/navBar/client/utils/currentTime";
 import NavBarComp, { NavBarItemType } from "@/components/navBar/navBar";
 import Head from "next/head";
 
@@ -17,6 +18,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       </Head>
       <header>
         <NavBarComp items={navBarItems} />
+        <CurrentTimeComp />
       </header>
       <main>{children}</main>
     </div>
